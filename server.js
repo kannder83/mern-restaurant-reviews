@@ -9,5 +9,7 @@ app.use(express.json());
 
 app.use("/api/v1/restaurants", restaurants);
 app.use("*", (req, res) => {
-  res.status(404).json({ error: "Page not found." });
+  res.status(404).json({ error: "Not found." });
 });
+
+export default app;
